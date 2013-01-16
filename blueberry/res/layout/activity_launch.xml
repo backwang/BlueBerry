@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
+    <ImageView
+        android:id="@+id/launch_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/launch_background"
+        android:contentDescription="launch" />
 
 </RelativeLayout>

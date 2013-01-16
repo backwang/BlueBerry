@@ -23,6 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.blueberry.MainActivity"
+            
+            android:theme="@android:style/Theme.NoTitleBar" >
+            
+        </activity>
     </application>
 
 </manifest>

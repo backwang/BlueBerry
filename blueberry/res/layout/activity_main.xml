@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/button1"
+    <!-- 窗体中部的内容主体 -->
+
+    <RelativeLayout
+        android:id="@+id/rel_body_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_below="@+id/rel_title_bar"
+        android:background="#ff0000" >
 
-</LinearLayout>
+        <ListView
+            android:id="@+id/list_bodycontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#00ff00" >
+
+        <ImageButton
+            android:id="@+id/imagebtn_userhead_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/userhead_icon"
+            android:minHeight="60dp"
+            android:minWidth="60dp" />
+
+        <ImageButton
+            android:id="@+id/imagebtn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_more"
+            android:minHeight="60dp"
+            android:minWidth="60dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

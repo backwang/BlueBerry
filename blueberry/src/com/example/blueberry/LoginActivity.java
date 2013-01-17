@@ -19,6 +19,7 @@ public class LoginActivity extends Activity {
 				startActivity(intent);
 
 				overridePendingTransition(R.anim.main_start, R.anim.launch_exit);
+				finish();
 		    }
 
 			@Override

@@ -4,7 +4,12 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-     
+    <!-- 配置这个字段让程序自动适应不同屏幕尺寸屏幕 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -23,9 +28,7 @@
         </activity>
         <activity
             android:name="com.example.blueberry.MainActivity"
-            
             android:theme="@android:style/Theme.NoTitleBar" >
-            
         </activity>
     </application>
 

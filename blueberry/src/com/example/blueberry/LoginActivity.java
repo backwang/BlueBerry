@@ -3,10 +3,7 @@ package com.example.blueberry;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
-import android.widget.RelativeLayout;
+import android.os.CountDownTimer;
 
 public class LoginActivity extends Activity {
 
@@ -14,32 +11,24 @@ public class LoginActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_launch);
-		
-		final Intent intent=new Intent(LoginActivity.this,MainActivity.class);
-		RelativeLayout myLayout = (RelativeLayout) findViewById(R.id.launchlayout);
-		Animation animation = AnimationUtils.loadAnimation(this,R.anim.launch_exit);  
-		animation.setAnimationListener(new AnimationListener() {
-			
+		 
+		new CountDownTimer(3000, 1000) {  
+		    
+		    public void onFinish() {  
+		    	Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+				startActivity(intent);
+
+				overridePendingTransition(R.anim.main_start, R.anim.launch_exit);
+		    }
+
 			@Override
-			public void onAnimationStart(Animation animation) {
+			public void onTick(long millisUntilFinished) {
 				// TODO Auto-generated method stub
 				
 			}
-			
-			@Override
-			public void onAnimationRepeat(Animation animation) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onAnimationEnd(Animation animation) {
-				// TODO Auto-generated method stub
-				 startActivity(intent);
-			}
-		});
-		 myLayout.startAnimation(animation);
-		
+
+			 
+		 }.start();  
 	}
 
 	 

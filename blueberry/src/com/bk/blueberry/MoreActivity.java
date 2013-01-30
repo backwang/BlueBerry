@@ -7,25 +7,25 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.example.blueberry.R;
 
 public class MoreActivity extends MainActivity implements OnClickListener {
 
 	Button btn_login;
-	RelativeLayout rel_top_bar;
+	 
 	ImageButton btn_return;
     LoginActivity loginActivity;
-	public void InitView(RelativeLayout rel_top_bar) {
+	public void InitView() {
 		// TODO Auto-generated method stub
 
-		btn_login = (Button) (rel_top_bar.findViewById(R.id.btn_login));
+		RelativeLayout relativeLayout =MainActivity.frame_element.getRel_top_bar();
+		btn_login = (Button) (relativeLayout.findViewById(R.id.btn_login));
 		btn_login.setOnClickListener(this);
 
-		btn_return = (ImageButton) (rel_top_bar.findViewById(R.id.btn_return));
+		btn_return = (ImageButton) (MainActivity.frame_element.getRel_top_bar().findViewById(R.id.btn_return));
 		btn_return.setOnClickListener(this);
-		this.rel_top_bar = rel_top_bar;
+		 
 
 	}
 
@@ -41,16 +41,17 @@ public class MoreActivity extends MainActivity implements OnClickListener {
 					R.layout.activity_login, null);
 			
 			layoutParams.gravity = Gravity.CENTER;
-			rel_body_content.addView(layout_activity_login, layoutParams);
+			MainActivity.frame_element.getRel_body_content().addView(layout_activity_login, layoutParams);
 			 
 			LoginActivity loginActivity =new LoginActivity();
-			loginActivity.InitView(rel_body_content);
+			loginActivity.InitView();
 			break;
 		case R.id.btn_return:
+			 
 			View layout_activity_main = MainActivity.inflater.inflate(
 					R.layout.activity_main, null);
 			
-			rel_body_content.addView(layout_activity_main);
+			MainActivity.frame_element.getRel_body_content().addView(layout_activity_main);
 			break;
 		default:
 			break;

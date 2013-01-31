@@ -4,6 +4,8 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-sdk android:minSdkVersion="3" >
+    </uses-sdk>
     <!-- 配置这个字段让程序自动适应不同屏幕尺寸屏幕 -->
     <supports-screens
         android:anyDensity="true"

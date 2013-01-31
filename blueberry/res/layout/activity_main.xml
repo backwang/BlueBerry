@@ -11,7 +11,7 @@
         android:id="@+id/rel_body_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rel_title_bar"
+        android:layout_below="@+id/rel_frist_bar"
         android:background="#ff0000" >
 
         <ListView
@@ -30,7 +30,7 @@
         android:background="#0000ff" >
 
         <RelativeLayout
-            android:id="@+id/rel_title_bar"
+            android:id="@+id/rel_frist_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
            

@@ -15,7 +15,7 @@ public class LaunchActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_launch);
 		 
-		new CountDownTimer(2000, 1000) {  
+		new CountDownTimer(1000, 1000) {  
 		    
 		    @SuppressLint("NewApi")//可以修正下面overridePendingTransition的报错
 			public void onFinish() {  
